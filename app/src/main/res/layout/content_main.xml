@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,7 +13,7 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/TvCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/seekBar"
@@ -23,7 +22,7 @@
         android:layout_marginTop="40dp"
         android:text="0"
         android:textAlignment="center"
-        android:textSize="128sp"/>
+        android:textSize="128sp" />
 
     <SeekBar
         android:id="@+id/seekBar"
@@ -31,12 +30,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/TvBarOption"
         android:max="1000"
-        android:progress="100"/>
+        android:progress="100"
+        android:indeterminate="false" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/TvBarOption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -46,7 +46,7 @@
         android:gravity="center"
         android:text="100"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textStyle="italic"/>
+        android:textStyle="italic" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -58,24 +58,27 @@
         android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/RbtnInc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="New RadioButton"/>
+            android:text="Increment" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/RbtnDec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"/>
+            android:text="Decrement"
+            android:checked="false" />
     </RadioGroup>
 
     <ToggleButton
-        android:id="@+id/toggleButton"
+        android:id="@+id/TogBut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/TvCount"
         android:layout_centerHorizontal="true"
-        android:text="New ToggleButton"/>
+        android:text="Start"
+        android:checked="false" />
+
 </RelativeLayout>
